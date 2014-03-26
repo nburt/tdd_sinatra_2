@@ -31,4 +31,8 @@ class App < Sinatra::Application
     redirect '/'
   end
 
+  delete '/task/:id' do
+    TASKS.delete_at(params[:id].to_i)
+    redirect '/'
+  end
 end

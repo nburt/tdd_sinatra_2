@@ -6,7 +6,7 @@ Capybara.app = App
 
 feature 'manage items' do
 
-  scenario 'user can add items, view them individually, edit them' do
+  scenario 'user can add items, view them individually, edit them, and delete them' do
 
     visit '/'
     within 'h1' do
@@ -27,6 +27,10 @@ feature 'manage items' do
     fill_in 'task_to_edit', with: 'Go shopping'
     click_on 'Edit Task'
     expect(page).to have_content 'Go shopping'
+
+    visit '/task/0'
+    click_on 'Delete Task'
+    expect(page).to_not have_content 'Go shopping'
   end
 
 end
