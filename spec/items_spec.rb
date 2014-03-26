@@ -17,6 +17,11 @@ feature 'manage items' do
     fill_in 'task_to_add', with: 'Go to grocery store'
     click_on 'Add Task'
     expect(page).to have_content 'Go to grocery store'
+
+    click_link 'Show Task'
+    within 'h1' do
+      expect(page).to have_content 'Go to grocery store'
+    end
   end
 
 end

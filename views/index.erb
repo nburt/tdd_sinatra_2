@@ -7,14 +7,14 @@
 <a href="/add-task">Add a Task</a>
 <br>
 <h3>Tasks to do:</h3>
-
 <ol>
+  <% index = 0 %>
   <% TASKS.each do |task| %>
   <li>
-      <%= task %>
+      <%= task %> - <a href="/task/<%= index%>">Show Task</a>
   </li>
+    <% index += 1 %>
   <% end %>
 </ol>
-
 </body>
 </html>
