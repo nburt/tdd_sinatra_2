@@ -1,0 +1,12 @@
+<html>
+<head>
+  <title>Edit <%= task %></title>
+</head>
+<body>
+<form action="/task/<%= id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="task_to_edit">
+  <input type="submit" value="Edit Task">
+</form>
+</body>
+</html>
