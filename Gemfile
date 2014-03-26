@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-group :production do
-  gem 'sinatra', '~> 1.4.4'
-end
+gem 'sinatra', '~> 1.4.4'
 
 group :development, :test do
   gem 'launchy', '~> 2.4.2'
