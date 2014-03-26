@@ -3,6 +3,16 @@
   <title>My Awesome Items</title>
 </head>
 <body>
-  <h1>Welcome</h1>
+<h1>Welcome</h1>
+<a href="/add-task">Add a Task</a>
+<br>
+<h3>Tasks to do:</h3>
+<% TASKS.each do |task| %>
+<ol>
+  <li>
+      <%= task %>
+  </li>
+</ol>
+<% end %>
 </body>
 </html>
