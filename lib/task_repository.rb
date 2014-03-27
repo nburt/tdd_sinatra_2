@@ -21,4 +21,14 @@ class Task
       counter += 1
     end
   end
+
+  def delete(task_to_delete)
+    counter = 0
+    @task_list.each do |task|
+      if task_to_delete == task
+        @task_list.delete_at(counter)
+      end
+      counter += 1
+    end
+  end
 end

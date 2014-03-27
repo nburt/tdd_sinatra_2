@@ -14,4 +14,11 @@ describe "creates class to add, edit, show, and delete tasks" do
     task.edit("Get groceries", "Go shopping")
     expect(task.to_do_list).to eq ["Go shopping"]
   end
+
+  it "allows a user to delete tasks" do
+    task = Task.new
+    task.add("Get groceries")
+    task.delete("Get groceries")
+    expect(task.to_do_list).to eq []
+  end
 end
