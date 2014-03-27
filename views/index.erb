@@ -1,18 +1,20 @@
 <html>
 <head>
   <title>My Awesome Items</title>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 <h1>Welcome</h1>
 <a href="/add-task">Add a Task</a>
 <br>
+
 <h3>Tasks to do:</h3>
 <ol>
   <% index = 0 %>
   <% tasks.each do |task| %>
-  <li>
-      <%= task %> - <a href="/task/<%= index%>">Show Task</a>
-  </li>
+    <li>
+      <%= task %> - <a href="/task/<%= index %>">Show Task</a>
+    </li>
     <% index += 1 %>
   <% end %>
 </ol>

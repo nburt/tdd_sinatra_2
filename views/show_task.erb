@@ -1,12 +1,14 @@
 <html>
 <head>
   <title><%= task %></title>
+  <link type="text/css" rel="stylesheet" href="../stylesheet.css">
 </head>
 <body>
 <h1><%= task %></h1>
 <br>
 <a href="/task/<%= id %>/edit">Edit Task</a>
 <br><br>
+
 <form action="/task/<%= id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete Task">
